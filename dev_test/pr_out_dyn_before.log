@@ -1,0 +1,205 @@
+[16:52:10] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:555: @fused_prod: primfn(placeholder_1: handle, placeholder_red_1: handle) -> ()
+  attr = {"global_symbol": "fused_prod", "tir.noalias": True}
+  buffers = {placeholder_red: Buffer(placeholder_red_2: Pointer(int64), int64, [], []),
+             placeholder: Buffer(placeholder_2: Pointer(int64), int64, [4], [])}
+  buffer_map = {placeholder_1: placeholder, placeholder_red_1: placeholder_red} {
+  placeholder_red_2[0] = 1i64
+  for (k0: int32, 0, 4) {
+    placeholder_red_2[0] = ((int64*)placeholder_red_2[0]*(int64*)placeholder_2[k0])
+  }
+}
+
+
+[16:52:10] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:555: @fused_multiply: primfn(placeholder_1: handle, T_multiply_1: handle) -> ()
+  attr = {"global_symbol": "fused_multiply", "tir.noalias": True}
+  buffers = {T_multiply: Buffer(T_multiply_2: Pointer(int64), int64, [], []),
+             placeholder: Buffer(placeholder_2: Pointer(int64), int64, [], [])}
+  buffer_map = {placeholder_1: placeholder, T_multiply_1: T_multiply} {
+  T_multiply_2[0] = ((int64*)placeholder_2[0]*4i64)
+}
+
+
+[16:52:10] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:555: @fused_nn_softmax: primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [any_dim: int32, any_dim_1: int32, any_dim_2: int32, any_dim_3: int32], [stride: int32, stride_1: int32, stride_2: int32, stride_3: int32], type="auto"),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [any_dim, any_dim_1, any_dim_2, any_dim_3], [stride_4: int32, stride_5: int32, stride_6: int32, stride_7: int32], type="auto")}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  attr [T_softmax_maxelem: Pointer(global float32)] "storage_scope" = "global";
+  allocate(T_softmax_maxelem, float32, [((any_dim*any_dim_1)*any_dim_2)]);
+  attr [T_softmax_exp: Pointer(global float32)] "storage_scope" = "global";
+  allocate(T_softmax_exp, float32, [(((any_dim*any_dim_1)*any_dim_2)*any_dim_3)]) {
+    attr [IterVar(blockIdx.x: int32, (nullptr), "ThreadIndex", "blockIdx.x")] "thread_extent" = floordiv((((any_dim*any_dim_1)*any_dim_2) + 511), 512);
+    attr [IterVar(threadIdx.x: int32, (nullptr), "ThreadIndex", "threadIdx.x")] "thread_extent" = 512;
+    if (blockIdx.x < floordiv(((any_dim*any_dim_1)*any_dim_2), 512)) {
+      if (floordiv(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1) < any_dim) {
+        if (floormod(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1) < any_dim_1) {
+          if (floormod(((blockIdx.x*512) + threadIdx.x), any_dim_2) < any_dim_2) {
+            if (floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2) < (any_dim*any_dim_1)) {
+              T_softmax_maxelem[((blockIdx.x*512) + threadIdx.x)] = -3.40282e+38f32
+            }
+          }
+        }
+      }
+      for (k: int32, 0, any_dim_3) {
+        if (floordiv(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1) < any_dim) {
+          if (floormod(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1) < any_dim_1) {
+            if (floormod(((blockIdx.x*512) + threadIdx.x), any_dim_2) < any_dim_2) {
+              if (floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2) < (any_dim*any_dim_1)) {
+                T_softmax_maxelem[((blockIdx.x*512) + threadIdx.x)] = max((float32*)T_softmax_maxelem[((blockIdx.x*512) + threadIdx.x)], (float32*)placeholder_2[((((floordiv(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1)*stride_4) + (floormod(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1)*stride_5)) + (floormod(((blockIdx.x*512) + threadIdx.x), any_dim_2)*stride_6)) + (k*stride_7))])
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if (floordiv(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1) < any_dim) {
+        if (floormod(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1) < any_dim_1) {
+          if (floormod(((blockIdx.x*512) + threadIdx.x), any_dim_2) < any_dim_2) {
+            if (floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2) < (any_dim*any_dim_1)) {
+              if (((blockIdx.x*512) + threadIdx.x) < ((any_dim*any_dim_1)*any_dim_2)) {
+                T_softmax_maxelem[((blockIdx.x*512) + threadIdx.x)] = -3.40282e+38f32
+              }
+            }
+          }
+        }
+      }
+      for (k_1: int32, 0, any_dim_3) {
+        if (floordiv(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1) < any_dim) {
+          if (floormod(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1) < any_dim_1) {
+            if (floormod(((blockIdx.x*512) + threadIdx.x), any_dim_2) < any_dim_2) {
+              if (floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2) < (any_dim*any_dim_1)) {
+                if (((blockIdx.x*512) + threadIdx.x) < ((any_dim*any_dim_1)*any_dim_2)) {
+                  T_softmax_maxelem[((blockIdx.x*512) + threadIdx.x)] = max((float32*)T_softmax_maxelem[((blockIdx.x*512) + threadIdx.x)], (float32*)placeholder_2[((((floordiv(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1)*stride_4) + (floormod(floordiv(((blockIdx.x*512) + threadIdx.x), any_dim_2), any_dim_1)*stride_5)) + (floormod(((blockIdx.x*512) + threadIdx.x), any_dim_2)*stride_6)) + (k_1*stride_7))])
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    attr [IterVar(blockIdx.x_1: int32, (nullptr), "ThreadIndex", "blockIdx.x")] "thread_extent" = floordiv(((((any_dim*any_dim_1)*any_dim_2)*any_dim_3) + 511), 512);
+    attr [IterVar(threadIdx.x_1: int32, (nullptr), "ThreadIndex", "threadIdx.x")] "thread_extent" = 512;
+    if (blockIdx.x_1 < floordiv((((any_dim*any_dim_1)*any_dim_2)*any_dim_3), 512)) {
+      if (floordiv(floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2), any_dim_1) < any_dim) {
+        if (floormod(floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2), any_dim_1) < any_dim_1) {
+          if (floormod(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2) < any_dim_2) {
+            if (floormod(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3) < any_dim_3) {
+              if (floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2) < (any_dim*any_dim_1)) {
+                if (floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3) < ((any_dim*any_dim_1)*any_dim_2)) {
+                  T_softmax_exp[((blockIdx.x_1*512) + threadIdx.x_1)] = @tir.exp(((float32*)placeholder_2[((((floordiv(floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2), any_dim_1)*stride_4) + (floormod(floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2), any_dim_1)*stride_5)) + (floormod(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2)*stride_6)) + (floormod(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3)*stride_7))] - (float32*)T_softmax_maxelem[floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3)]), dtype=float32)
+                }
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if (floordiv(floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2), any_dim_1) < any_dim) {
+        if (floormod(floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2), any_dim_1) < any_dim_1) {
+          if (floormod(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2) < any_dim_2) {
+            if (floormod(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3) < any_dim_3) {
+              if (floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2) < (any_dim*any_dim_1)) {
+                if (floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3) < ((any_dim*any_dim_1)*any_dim_2)) {
+                  if (((blockIdx.x_1*512) + threadIdx.x_1) < (((any_dim*any_dim_1)*any_dim_2)*any_dim_3)) {
+                    T_softmax_exp[((blockIdx.x_1*512) + threadIdx.x_1)] = @tir.exp(((float32*)placeholder_2[((((floordiv(floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2), any_dim_1)*stride_4) + (floormod(floordiv(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2), any_dim_1)*stride_5)) + (floormod(floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3), any_dim_2)*stride_6)) + (floormod(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3)*stride_7))] - (float32*)T_softmax_maxelem[floordiv(((blockIdx.x_1*512) + threadIdx.x_1), any_dim_3)]), dtype=float32)
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    attr [IterVar(blockIdx.x_2: int32, (nullptr), "ThreadIndex", "blockIdx.x")] "thread_extent" = floordiv((((any_dim*any_dim_1)*any_dim_2) + 511), 512);
+    attr [IterVar(threadIdx.x_2: int32, (nullptr), "ThreadIndex", "threadIdx.x")] "thread_extent" = 512;
+    if (blockIdx.x_2 < floordiv(((any_dim*any_dim_1)*any_dim_2), 512)) {
+      if (floordiv(floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2), any_dim_1) < any_dim) {
+        if (floormod(floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2), any_dim_1) < any_dim_1) {
+          if (floormod(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2) < any_dim_2) {
+            if (floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2) < (any_dim*any_dim_1)) {
+              T_softmax_maxelem[((blockIdx.x_2*512) + threadIdx.x_2)] = 0f32
+            }
+          }
+        }
+      }
+      for (k_2: int32, 0, any_dim_3) {
+        if (floordiv(floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2), any_dim_1) < any_dim) {
+          if (floormod(floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2), any_dim_1) < any_dim_1) {
+            if (floormod(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2) < any_dim_2) {
+              if (floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2) < (any_dim*any_dim_1)) {
+                T_softmax_maxelem[((blockIdx.x_2*512) + threadIdx.x_2)] = ((float32*)T_softmax_maxelem[((blockIdx.x_2*512) + threadIdx.x_2)] + (float32*)T_softmax_exp[((((blockIdx.x_2*512) + threadIdx.x_2)*any_dim_3) + k_2)])
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if (floordiv(floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2), any_dim_1) < any_dim) {
+        if (floormod(floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2), any_dim_1) < any_dim_1) {
+          if (floormod(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2) < any_dim_2) {
+            if (floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2) < (any_dim*any_dim_1)) {
+              if (((blockIdx.x_2*512) + threadIdx.x_2) < ((any_dim*any_dim_1)*any_dim_2)) {
+                T_softmax_maxelem[((blockIdx.x_2*512) + threadIdx.x_2)] = 0f32
+              }
+            }
+          }
+        }
+      }
+      for (k_3: int32, 0, any_dim_3) {
+        if (floordiv(floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2), any_dim_1) < any_dim) {
+          if (floormod(floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2), any_dim_1) < any_dim_1) {
+            if (floormod(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2) < any_dim_2) {
+              if (floordiv(((blockIdx.x_2*512) + threadIdx.x_2), any_dim_2) < (any_dim*any_dim_1)) {
+                if (((blockIdx.x_2*512) + threadIdx.x_2) < ((any_dim*any_dim_1)*any_dim_2)) {
+                  T_softmax_maxelem[((blockIdx.x_2*512) + threadIdx.x_2)] = ((float32*)T_softmax_maxelem[((blockIdx.x_2*512) + threadIdx.x_2)] + (float32*)T_softmax_exp[((((blockIdx.x_2*512) + threadIdx.x_2)*any_dim_3) + k_3)])
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    attr [IterVar(blockIdx.x_3: int32, (nullptr), "ThreadIndex", "blockIdx.x")] "thread_extent" = floordiv(((((any_dim*any_dim_1)*any_dim_2)*any_dim_3) + 511), 512);
+    attr [IterVar(threadIdx.x_3: int32, (nullptr), "ThreadIndex", "threadIdx.x")] "thread_extent" = 512;
+    if (blockIdx.x_3 < floordiv((((any_dim*any_dim_1)*any_dim_2)*any_dim_3), 512)) {
+      if (floordiv(floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2), any_dim_1) < any_dim) {
+        if (floormod(floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2), any_dim_1) < any_dim_1) {
+          if (floormod(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2) < any_dim_2) {
+            if (floormod(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3) < any_dim_3) {
+              if (floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2) < (any_dim*any_dim_1)) {
+                if (floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3) < ((any_dim*any_dim_1)*any_dim_2)) {
+                  T_softmax_norm_2[((((floordiv(floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2), any_dim_1)*stride) + (floormod(floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2), any_dim_1)*stride_1)) + (floormod(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2)*stride_2)) + (floormod(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3)*stride_3))] = ((float32*)T_softmax_exp[((blockIdx.x_3*512) + threadIdx.x_3)] / (float32*)T_softmax_maxelem[floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3)])
+                }
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if (floordiv(floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2), any_dim_1) < any_dim) {
+        if (floormod(floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2), any_dim_1) < any_dim_1) {
+          if (floormod(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2) < any_dim_2) {
+            if (floormod(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3) < any_dim_3) {
+              if (floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2) < (any_dim*any_dim_1)) {
+                if (floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3) < ((any_dim*any_dim_1)*any_dim_2)) {
+                  if (((blockIdx.x_3*512) + threadIdx.x_3) < (((any_dim*any_dim_1)*any_dim_2)*any_dim_3)) {
+                    T_softmax_norm_2[((((floordiv(floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2), any_dim_1)*stride) + (floormod(floordiv(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2), any_dim_1)*stride_1)) + (floormod(floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3), any_dim_2)*stride_2)) + (floormod(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3)*stride_3))] = ((float32*)T_softmax_exp[((blockIdx.x_3*512) + threadIdx.x_3)] / (float32*)T_softmax_maxelem[floordiv(((blockIdx.x_3*512) + threadIdx.x_3), any_dim_3)])
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Raw module: 
+def @main(%x: Tensor[(?, ?, ?, ?), float32]) {
+  nn.softmax(%x)
+}
+
+Running on (cuda, cuda(0))
+Finish in 17.18307 ms

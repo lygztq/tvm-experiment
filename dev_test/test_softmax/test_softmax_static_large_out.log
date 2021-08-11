@@ -1,0 +1,2242 @@
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:916: LOWER START
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass RemoveUnusedFunctions
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) {
+  nn.softmax(%x)
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass ToBasicBlockNormalForm
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) {
+  nn.softmax(%x)
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass Legalize
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass Legalize
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass sequential
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass Legalize
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass EtaExpand
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x)
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass SimplifyInference
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass SimplifyExpr
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass Inline
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass DeadCodeElimination
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass InlinePrimitives
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FoldConstant
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FoldConstant
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FoldScaleAxis
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FoldConstant
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FuseOps
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %0(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass ToANormalForm
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %x1 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  let %x2 = %x1(%x);
+  %x2
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass InferType
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %x1: fn (Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %x1(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %x2
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass LambdaLift
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %x1: fn (Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %x1(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %x2
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass Inline
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  let %x1: fn (Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] = %0;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %0(%x);
+  %x2
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass DeadCodeElimination
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  let %x1: Tensor[(2, 10, 257, 1025), float32] = %0(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %x1
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass InlinePrimitives
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  let %x1: Tensor[(2, 10, 257, 1025), float32] = %0(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %x1
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass InlineGlobals
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  let %x1: Tensor[(2, 10, 257, 1025), float32] = %0(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %x1
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass RemoveUnusedFunctions
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  let %x1: Tensor[(2, 10, 257, 1025), float32] = %0(%x) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %x1
+}
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass ManifestAlloc
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FoldConstant
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FuseOps
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass ManifestAlloc
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FuseOps
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FoldConstant
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FuseOps
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass ManifestAlloc
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass FoldConstant
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass sequential
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass InferType
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1) -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass LabelOps
+type Storage {
+  
+}
+
+def @main(%x: Tensor[(2, 10, 257, 1025), float32], hash="b0c0d5e3d057e834") -> Tensor[(2, 10, 257, 1025), float32] {
+  let %storage_0: Storage[] = memory.alloc_storage(21074000 /* ty=int64 */, 64 /* ty=int64 */, meta[relay.attrs.AllocStorageAttrs][0]) /* ty=Storage[] */;
+  let %tensor_0: Tensor[(2, 10, 257, 1025), float32] = memory.alloc_tensor(%storage_0, 0 /* ty=int64 */, meta[relay.Constant][0] /* ty=Tensor[(4), int64] */, meta[relay.attrs.AllocTensorAttrs][0]) /* ty=Tensor[(2, 10, 257, 1025), float32] */;
+  %0 = fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1, hash="f238dc117bb6da04") -> Tensor[(2, 10, 257, 1025), float32] {
+    nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+  };
+  %1 = (%x,);
+  %2 = (%tensor_0,);
+  let %x1: () = vm.invoke_tvm_op(%0, %1, %2) /* ty=() */;
+  let %x2: Tensor[(2, 10, 257, 1025), float32] = %tensor_0;
+  %x2
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:548: Lower Function Start
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:549: fn (%p0: Tensor[(2, 10, 257, 1025), float32], Primitive=1, hash="f238dc117bb6da04") -> Tensor[(2, 10, 257, 1025), float32] {
+  nn.softmax(%p0) /* ty=Tensor[(2, 10, 257, 1025), float32] */
+}
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/compile_engine.cc:767: POS1
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floordiv(floordiv(i0.i1.fused.i2.fused: int32, 257), 10))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floormod(floordiv(i0.i1.fused.i2.fused: int32, 257), 10))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floormod(i0.i1.fused.i2.fused: int32, 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floordiv(floordiv(i0.i1.fused.i2.fused: int32, 257), 10))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floormod(floordiv(i0.i1.fused.i2.fused: int32, 257), 10))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floormod(i0.i1.fused.i2.fused: int32, 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floordiv(floordiv(i0.i1.fused.i2.fused: int32, 257), 10))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floormod(floordiv(i0.i1.fused.i2.fused: int32, 257), 10))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floormod(i0.i1.fused.i2.fused: int32, 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floordiv(i0.i1.fused.i2.fused: int32, 2570))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floordiv(floormod(i0.i1.fused.i2.fused: int32, 2570), 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 >= floormod(i0.i1.fused.i2.fused: int32, 257))
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(k, ): range(min=0, ext=1025)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i2, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0, range(min=0, ext=2)): range(min=floordiv(i0.i1.fused.i2.fused, 2570), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i1, range(min=0, ext=10)): range(min=floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i1, range(min=0, ext=10)): range(min=floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(k, range(min=0, ext=1025)): range(min=0, ext=1025)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i2, range(min=0, ext=257)): range(min=floormod(i0.i1.fused.i2.fused, 257), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i1, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(k, ): range(min=0, ext=1025)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0, range(min=0, ext=2)): range(min=floordiv(i0.i1.fused.i2.fused, 2570), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0, range(min=0, ext=2)): range(min=0, ext=2)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0.i1.fused, ): range(min=0, ext=20)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i3, ): range(min=0, ext=1025)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0.i1.fused.i2.fused, ): range(min=0, ext=5140)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i1, range(min=0, ext=10)): range(min=0, ext=10)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(k, range(min=0, ext=1025)): range(min=0, ext=1025)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i2, range(min=0, ext=257)): range(min=floormod(i0.i1.fused.i2.fused, 257), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i2, range(min=0, ext=257)): range(min=0, ext=257)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i3, range(min=0, ext=1025)): range(min=0, ext=1025)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0, range(min=0, ext=2)): range(min=floordiv(i0.i1.fused.i2.fused, 2570), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i2, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i1, range(min=0, ext=10)): range(min=floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i3, ): range(min=0, ext=1025)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i2, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i2, range(min=0, ext=257)): range(min=floormod(i0.i1.fused.i2.fused, 257), ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i3, range(min=0, ext=1025)): range(min=0, ext=1025)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i1, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i0, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/te/schedule/bound.cc:256: iter_var(i1, ): range(min=0, ext=1)
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floordiv(i0.i1.fused.i2.fused: int32, 2570))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floordiv(floormod(i0.i1.fused.i2.fused: int32, 2570), 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove False
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floormod(i0.i1.fused.i2.fused: int32, 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove False
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floordiv(i0.i1.fused.i2.fused: int32, 2570))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floordiv(floormod(i0.i1.fused.i2.fused: int32, 2570), 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove False
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floormod(i0.i1.fused.i2.fused: int32, 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove False
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floordiv(i0.i1.fused.i2.fused: int32, 2570))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floordiv(floormod(i0.i1.fused.i2.fused: int32, 2570), 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove False
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove (0 == floormod(i0.i1.fused.i2.fused: int32, 257))
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = false when prove False
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/arith/analyzer.cc:139: Res = true when prove True
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.InjectPrefetch
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  attr [T_softmax_norm] "realize_scope" = "";
+  realize(T_softmax_norm, [0:2, 0:10, 0:257, 0:1025], True {
+    for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+      attr [T_softmax_maxelem: Buffer(T_softmax_maxelem_1: Pointer(float32), float32, [2, 10, 257], [])] "realize_scope" = "";
+      realize(T_softmax_maxelem, [floordiv(i0.i1.fused.i2.fused, 2570):(floordiv(i0.i1.fused.i2.fused, 2570) + 1), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257):(floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257) + 1), floormod(i0.i1.fused.i2.fused, 257):(floormod(i0.i1.fused.i2.fused, 257) + 1)], True {
+         {
+          T_softmax_maxelem[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257)] = -3.40282e+38f32
+          for (k: int32, 0, 1025) {
+            T_softmax_maxelem[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257)] = max(T_softmax_maxelem[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257)], placeholder[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257), k])
+          }
+        }
+        attr [T_softmax_exp: Buffer(T_softmax_exp_1: Pointer(float32), float32, [2, 10, 257, 1025], [])] "realize_scope" = "";
+        realize(T_softmax_exp, [floordiv(i0.i1.fused.i2.fused, 2570):(floordiv(i0.i1.fused.i2.fused, 2570) + 1), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257):(floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257) + 1), floormod(i0.i1.fused.i2.fused, 257):(floormod(i0.i1.fused.i2.fused, 257) + 1), 0:1025], True {
+          for (i3: int32, 0, 1025) {
+            T_softmax_exp[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257), i3] = @tir.exp((placeholder[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257), i3] - T_softmax_maxelem[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257)]), dtype=float32)
+          }
+          attr [T_softmax_expsum: Buffer(T_softmax_expsum_1: Pointer(float32), float32, [2, 10, 257], [])] "realize_scope" = "";
+          realize(T_softmax_expsum, [floordiv(i0.i1.fused.i2.fused, 2570):(floordiv(i0.i1.fused.i2.fused, 2570) + 1), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257):(floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257) + 1), floormod(i0.i1.fused.i2.fused, 257):(floormod(i0.i1.fused.i2.fused, 257) + 1)], True {
+             {
+              T_softmax_expsum[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257)] = 0f32
+              for (k_1: int32, 0, 1025) {
+                T_softmax_expsum[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257)] = (T_softmax_expsum[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257)] + T_softmax_exp[floordiv(i0.i1.fused.i2.fused, 2570), floordiv(floormod(i0.i1.fused.i2.fused, 2570), 257), floormod(i0.i1.fused.i2.fused, 257), k_1])
+              }
+            }
+            for (i3_1: int32, 0, 1025) {
+              T_softmax_norm[floordiv(floordiv(i0.i1.fused.i2.fused, 257), 10), floormod(floordiv(i0.i1.fused.i2.fused, 257), 10), floormod(i0.i1.fused.i2.fused, 257), i3_1] = (T_softmax_exp[floordiv(floordiv(i0.i1.fused.i2.fused, 257), 10), floormod(floordiv(i0.i1.fused.i2.fused, 257), 10), floormod(i0.i1.fused.i2.fused, 257), i3_1] / T_softmax_expsum[floordiv(floordiv(i0.i1.fused.i2.fused, 257), 10), floormod(floordiv(i0.i1.fused.i2.fused, 257), 10), floormod(i0.i1.fused.i2.fused, 257)])
+            }
+          })
+        })
+      })
+    }
+  })
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.StorageFlatten
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.BF16Promote
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.BF16CastElimination
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.BF16TypeLowering
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.BF16Legalize
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.NarrowDataType
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.Simplify
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LoopPartition
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.VectorizeLoop
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.InjectVirtualThread
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.InjectDoubleBuffer
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1, 1, 1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+      attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+      allocate(T_softmax_exp, float32, [1, 1, 1, 1025]) {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1, 1, 1]) {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.StorageRewrite
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+       {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+         {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.UnrollLoop
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+       {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+         {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.Simplify
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+       {
+        T_softmax_maxelem[0] = -3.40282e+38f32
+        for (k: int32, 0, 1025) {
+          T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+        }
+      }
+       {
+        for (i3: int32, 0, 1025) {
+          T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+        }
+         {
+           {
+            T_softmax_expsum[0] = 0f32
+            for (k_1: int32, 0, 1025) {
+              T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+            }
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.RemoveNoOp
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.RewriteUnsafeSelect
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.HoistIfThenElse
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/compile_engine.cc:778: POS4
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:551: Lower Function End
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:982: LOWER END
+
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:1157: CODEGEN START
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass BindTarget
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True, "target": meta[Target][0]}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.VerifyMemory
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True, "target": meta[Target][0]}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.ThreadSync
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True, "target": meta[Target][0]}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.ThreadSync
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True, "target": meta[Target][0]}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.InferFragment
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True, "target": meta[Target][0]}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerThreadAllreduce
+primfn(placeholder_1: handle, T_softmax_norm_1: handle) -> ()
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True, "target": meta[Target][0]}
+  buffers = {T_softmax_norm: Buffer(T_softmax_norm_2: Pointer(float32), float32, [2, 10, 257, 1025], []),
+             placeholder: Buffer(placeholder_2: Pointer(float32), float32, [2, 10, 257, 1025], [])}
+  buffer_map = {placeholder_1: placeholder, T_softmax_norm_1: T_softmax_norm} {
+  for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+    attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_maxelem, float32, [1]);
+    attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_exp, float32, [1025]);
+    attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+    allocate(T_softmax_expsum, float32, [1]) {
+      T_softmax_maxelem[0] = -3.40282e+38f32
+      for (k: int32, 0, 1025) {
+        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + k)])
+      }
+      for (i3: int32, 0, 1025) {
+        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder_2[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+      }
+      T_softmax_expsum[0] = 0f32
+      for (k_1: int32, 0, 1025) {
+        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+      }
+      for (i3_1: int32, 0, 1025) {
+        T_softmax_norm_2[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.MakePackedAPI
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"global_symbol": "fused_nn_softmax", "tir.noalias": True, "target": meta[Target][0], "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  attr ["default"] "device_id" = dev_id;
+  attr ["default"] "device_type" = 1;
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_maxelem, float32, [1]);
+        attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_exp, float32, [1025]);
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1]) {
+          T_softmax_maxelem[0] = -3.40282e+38f32
+          for (k: int32, 0, 1025) {
+            T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+          }
+          for (i3: int32, 0, 1025) {
+            T_softmax_exp[i3] = @tir.exp(((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+          }
+          T_softmax_expsum[0] = 0f32
+          for (k_1: int32, 0, 1025) {
+            T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.SplitHostDevice
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"target": (nullptr), "tir.noalias": True, "global_symbol": "fused_nn_softmax", "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  attr ["default"] "device_id" = dev_id;
+  attr ["default"] "device_type" = 1;
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_maxelem, float32, [1]);
+        attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_exp, float32, [1025]);
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1]) {
+          T_softmax_maxelem[0] = -3.40282e+38f32
+          for (k: int32, 0, 1025) {
+            T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+          }
+          for (i3: int32, 0, 1025) {
+            T_softmax_exp[i3] = @tir.exp(((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+          }
+          T_softmax_expsum[0] = 0f32
+          for (k_1: int32, 0, 1025) {
+            T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass Filter
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"target": (nullptr), "tir.noalias": True, "global_symbol": "fused_nn_softmax", "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  attr ["default"] "device_id" = dev_id;
+  attr ["default"] "device_type" = 1;
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_maxelem, float32, [1]);
+        attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_exp, float32, [1025]);
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1]) {
+          T_softmax_maxelem[0] = -3.40282e+38f32
+          for (k: int32, 0, 1025) {
+            T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+          }
+          for (i3: int32, 0, 1025) {
+            T_softmax_exp[i3] = @tir.exp(((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+          }
+          T_softmax_expsum[0] = 0f32
+          for (k_1: int32, 0, 1025) {
+            T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass BindTarget
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"target": meta[Target][0], "tir.noalias": True, "global_symbol": "fused_nn_softmax", "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  attr ["default"] "device_id" = dev_id;
+  attr ["default"] "device_type" = 1;
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_maxelem, float32, [1]);
+        attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_exp, float32, [1025]);
+        attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+        allocate(T_softmax_expsum, float32, [1]) {
+          T_softmax_maxelem[0] = -3.40282e+38f32
+          for (k: int32, 0, 1025) {
+            T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+          }
+          for (i3: int32, 0, 1025) {
+            T_softmax_exp[i3] = @tir.exp(((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+          }
+          T_softmax_expsum[0] = 0f32
+          for (k_1: int32, 0, 1025) {
+            T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+          }
+          for (i3_1: int32, 0, 1025) {
+            T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerTVMBuiltin
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"target": meta[Target][0], "tir.noalias": True, "global_symbol": "fused_nn_softmax", "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        attr [T_softmax_maxelem] "storage_alignment" = 128 {
+          let T_softmax_maxelem = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+           {
+            if @tir.isnullptr(T_softmax_maxelem, dtype=bool) {
+              @tir.tvm_throw_last_error(, dtype=int32)
+            }
+            attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+            attr [T_softmax_exp] "storage_alignment" = 128 {
+              let T_softmax_exp = @tir.TVMBackendAllocWorkspace(1, dev_id, 4100u64, 2, 32, dtype=handle)
+               {
+                if @tir.isnullptr(T_softmax_exp, dtype=bool) {
+                  @tir.tvm_throw_last_error(, dtype=int32)
+                }
+                attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+                attr [T_softmax_expsum] "storage_alignment" = 128 {
+                  let T_softmax_expsum = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+                   {
+                    if @tir.isnullptr(T_softmax_expsum, dtype=bool) {
+                      @tir.tvm_throw_last_error(, dtype=int32)
+                    }
+                     {
+                      T_softmax_maxelem[0] = -3.40282e+38f32
+                      for (k: int32, 0, 1025) {
+                        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+                      }
+                      for (i3: int32, 0, 1025) {
+                        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+                      }
+                      T_softmax_expsum[0] = 0f32
+                      for (k_1: int32, 0, 1025) {
+                        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+                      }
+                      for (i3_1: int32, 0, 1025) {
+                        T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+                      }
+                    }
+                  }
+                  if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_expsum, dtype=int32) != 0) {
+                    @tir.tvm_throw_last_error(, dtype=int32)
+                  }
+                }
+              }
+              if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_exp, dtype=int32) != 0) {
+                @tir.tvm_throw_last_error(, dtype=int32)
+              }
+            }
+          }
+          if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_maxelem, dtype=int32) != 0) {
+            @tir.tvm_throw_last_error(, dtype=int32)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerCustomDatatypes
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"target": meta[Target][0], "tir.noalias": True, "global_symbol": "fused_nn_softmax", "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        attr [T_softmax_maxelem] "storage_alignment" = 128 {
+          let T_softmax_maxelem = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+           {
+            if @tir.isnullptr(T_softmax_maxelem, dtype=bool) {
+              @tir.tvm_throw_last_error(, dtype=int32)
+            }
+            attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+            attr [T_softmax_exp] "storage_alignment" = 128 {
+              let T_softmax_exp = @tir.TVMBackendAllocWorkspace(1, dev_id, 4100u64, 2, 32, dtype=handle)
+               {
+                if @tir.isnullptr(T_softmax_exp, dtype=bool) {
+                  @tir.tvm_throw_last_error(, dtype=int32)
+                }
+                attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+                attr [T_softmax_expsum] "storage_alignment" = 128 {
+                  let T_softmax_expsum = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+                   {
+                    if @tir.isnullptr(T_softmax_expsum, dtype=bool) {
+                      @tir.tvm_throw_last_error(, dtype=int32)
+                    }
+                     {
+                      T_softmax_maxelem[0] = -3.40282e+38f32
+                      for (k: int32, 0, 1025) {
+                        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+                      }
+                      for (i3: int32, 0, 1025) {
+                        T_softmax_exp[i3] = @tir.exp(((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+                      }
+                      T_softmax_expsum[0] = 0f32
+                      for (k_1: int32, 0, 1025) {
+                        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+                      }
+                      for (i3_1: int32, 0, 1025) {
+                        T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+                      }
+                    }
+                  }
+                  if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_expsum, dtype=int32) != 0) {
+                    @tir.tvm_throw_last_error(, dtype=int32)
+                  }
+                }
+              }
+              if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_exp, dtype=int32) != 0) {
+                @tir.tvm_throw_last_error(, dtype=int32)
+              }
+            }
+          }
+          if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_maxelem, dtype=int32) != 0) {
+            @tir.tvm_throw_last_error(, dtype=int32)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerIntrin
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"target": meta[Target][0], "tir.noalias": True, "global_symbol": "fused_nn_softmax", "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        attr [T_softmax_maxelem] "storage_alignment" = 128 {
+          let T_softmax_maxelem = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+           {
+            if @tir.isnullptr(T_softmax_maxelem, dtype=bool) {
+              @tir.tvm_throw_last_error(, dtype=int32)
+            }
+            attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+            attr [T_softmax_exp] "storage_alignment" = 128 {
+              let T_softmax_exp = @tir.TVMBackendAllocWorkspace(1, dev_id, 4100u64, 2, 32, dtype=handle)
+               {
+                if @tir.isnullptr(T_softmax_exp, dtype=bool) {
+                  @tir.tvm_throw_last_error(, dtype=int32)
+                }
+                attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+                attr [T_softmax_expsum] "storage_alignment" = 128 {
+                  let T_softmax_expsum = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+                   {
+                    if @tir.isnullptr(T_softmax_expsum, dtype=bool) {
+                      @tir.tvm_throw_last_error(, dtype=int32)
+                    }
+                     {
+                      T_softmax_maxelem[0] = -3.40282e+38f32
+                      for (k: int32, 0, 1025) {
+                        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+                      }
+                      for (i3: int32, 0, 1025) {
+                        T_softmax_exp[i3] = @tir.call_llvm_pure_intrin(54u32, 1u32, ((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+                      }
+                      T_softmax_expsum[0] = 0f32
+                      for (k_1: int32, 0, 1025) {
+                        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+                      }
+                      for (i3_1: int32, 0, 1025) {
+                        T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+                      }
+                    }
+                  }
+                  if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_expsum, dtype=int32) != 0) {
+                    @tir.tvm_throw_last_error(, dtype=int32)
+                  }
+                }
+              }
+              if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_exp, dtype=int32) != 0) {
+                @tir.tvm_throw_last_error(, dtype=int32)
+              }
+            }
+          }
+          if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_maxelem, dtype=int32) != 0) {
+            @tir.tvm_throw_last_error(, dtype=int32)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerDeviceStorageAccessInfo
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"target": meta[Target][0], "tir.noalias": True, "global_symbol": "fused_nn_softmax", "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        attr [T_softmax_maxelem] "storage_alignment" = 128 {
+          let T_softmax_maxelem = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+           {
+            if @tir.isnullptr(T_softmax_maxelem, dtype=bool) {
+              @tir.tvm_throw_last_error(, dtype=int32)
+            }
+            attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+            attr [T_softmax_exp] "storage_alignment" = 128 {
+              let T_softmax_exp = @tir.TVMBackendAllocWorkspace(1, dev_id, 4100u64, 2, 32, dtype=handle)
+               {
+                if @tir.isnullptr(T_softmax_exp, dtype=bool) {
+                  @tir.tvm_throw_last_error(, dtype=int32)
+                }
+                attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+                attr [T_softmax_expsum] "storage_alignment" = 128 {
+                  let T_softmax_expsum = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+                   {
+                    if @tir.isnullptr(T_softmax_expsum, dtype=bool) {
+                      @tir.tvm_throw_last_error(, dtype=int32)
+                    }
+                     {
+                      T_softmax_maxelem[0] = -3.40282e+38f32
+                      for (k: int32, 0, 1025) {
+                        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+                      }
+                      for (i3: int32, 0, 1025) {
+                        T_softmax_exp[i3] = @tir.call_llvm_pure_intrin(54u32, 1u32, ((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+                      }
+                      T_softmax_expsum[0] = 0f32
+                      for (k_1: int32, 0, 1025) {
+                        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+                      }
+                      for (i3_1: int32, 0, 1025) {
+                        T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+                      }
+                    }
+                  }
+                  if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_expsum, dtype=int32) != 0) {
+                    @tir.tvm_throw_last_error(, dtype=int32)
+                  }
+                }
+              }
+              if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_exp, dtype=int32) != 0) {
+                @tir.tvm_throw_last_error(, dtype=int32)
+              }
+            }
+          }
+          if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_maxelem, dtype=int32) != 0) {
+            @tir.tvm_throw_last_error(, dtype=int32)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.CombineContextCall
+primfn(args: handle, arg_type_ids: handle, num_args: int32, out_ret_value: handle, out_ret_tcode: handle, resource_handle: handle) -> int32
+  attr = {"target": meta[Target][0], "tir.noalias": True, "global_symbol": "fused_nn_softmax", "calling_conv": 1} {
+  assert((num_args == 2), "fused_nn_softmax: num_args should be 2")
+  let arg0: handle = @tir.tvm_struct_get(args, 0, 12, dtype=handle)
+  let arg0.code: int32 = (int32*)arg_type_ids[0]
+  let arg1: handle = @tir.tvm_struct_get(args, 1, 12, dtype=handle)
+  let arg1.code: int32 = (int32*)arg_type_ids[1]
+  let placeholder: Pointer(float32) = @tir.tvm_struct_get(arg0, 0, 1, dtype=handle)
+  attr [placeholder] "storage_alignment" = 128;
+  let arg0.shape: handle = @tir.tvm_struct_get(arg0, 0, 2, dtype=handle)
+  let arg0.strides: handle = @tir.tvm_struct_get(arg0, 0, 3, dtype=handle)
+  let dev_id: int32 = @tir.tvm_struct_get(arg0, 0, 9, dtype=int32)
+  let T_softmax_norm: Pointer(float32) = @tir.tvm_struct_get(arg1, 0, 1, dtype=handle)
+  attr [T_softmax_norm] "storage_alignment" = 128;
+  let arg1.shape: handle = @tir.tvm_struct_get(arg1, 0, 2, dtype=handle)
+  let arg1.strides: handle = @tir.tvm_struct_get(arg1, 0, 3, dtype=handle)
+  assert(((((arg0.code == 3) || (arg0.code == 13)) || (arg0.code == 7)) || (arg0.code == 4)), "fused_nn_softmax: Expect arg[0] to be pointer")
+  assert(((((arg1.code == 3) || (arg1.code == 13)) || (arg1.code == 7)) || (arg1.code == 4)), "fused_nn_softmax: Expect arg[1] to be pointer")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((4 == @tir.tvm_struct_get(arg0, 0, 4, dtype=int32)), "arg0.ndim is expected to equal 4")
+  assert((((@tir.tvm_struct_get(arg0, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg0, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg0, 0, 7, dtype=uint16) == 1u16)), "arg0.dtype is expected to be float32")
+  assert((2 == cast(int32, (int64*)arg0.shape[0])), "Argument arg0.shape[0] has an unsatisfied constraint: (2 == int32(arg0.shape[0]))")
+  assert((10 == cast(int32, (int64*)arg0.shape[1])), "Argument arg0.shape[1] has an unsatisfied constraint: (10 == int32(arg0.shape[1]))")
+  assert((257 == cast(int32, (int64*)arg0.shape[2])), "Argument arg0.shape[2] has an unsatisfied constraint: (257 == int32(arg0.shape[2]))")
+  assert((1025 == cast(int32, (int64*)arg0.shape[3])), "Argument arg0.shape[3] has an unsatisfied constraint: (1025 == int32(arg0.shape[3]))")
+   {
+    if !@tir.isnullptr(arg0.strides, dtype=bool) {
+      assert(((((1 == cast(int32, (int64*)arg0.strides[3])) && (1025 == cast(int32, (int64*)arg0.strides[2]))) && (263425 == cast(int32, (int64*)arg0.strides[1]))) && (2634250 == cast(int32, (int64*)arg0.strides[0]))), "arg0.strides: expected to be compact array")
+      0
+    }
+    assert((0u64 == @tir.tvm_struct_get(arg0, 0, 8, dtype=uint64)), "Argument arg0.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg0, 0, 8))")
+    assert((1 == @tir.tvm_struct_get(arg0, 0, 10, dtype=int32)), "Argument arg0.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg0, 0, 10))")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((4 == @tir.tvm_struct_get(arg1, 0, 4, dtype=int32)), "arg1.ndim is expected to equal 4")
+    assert((((@tir.tvm_struct_get(arg1, 0, 5, dtype=uint8) == 2u8) && (@tir.tvm_struct_get(arg1, 0, 6, dtype=uint8) == 32u8)) && (@tir.tvm_struct_get(arg1, 0, 7, dtype=uint16) == 1u16)), "arg1.dtype is expected to be float32")
+    assert((2 == cast(int32, (int64*)arg1.shape[0])), "Argument arg1.shape[0] has an unsatisfied constraint: (2 == int32(arg1.shape[0]))")
+    assert((10 == cast(int32, (int64*)arg1.shape[1])), "Argument arg1.shape[1] has an unsatisfied constraint: (10 == int32(arg1.shape[1]))")
+    assert((257 == cast(int32, (int64*)arg1.shape[2])), "Argument arg1.shape[2] has an unsatisfied constraint: (257 == int32(arg1.shape[2]))")
+    assert((1025 == cast(int32, (int64*)arg1.shape[3])), "Argument arg1.shape[3] has an unsatisfied constraint: (1025 == int32(arg1.shape[3]))")
+     {
+      if !@tir.isnullptr(arg1.strides, dtype=bool) {
+        assert(((((1 == cast(int32, (int64*)arg1.strides[3])) && (1025 == cast(int32, (int64*)arg1.strides[2]))) && (263425 == cast(int32, (int64*)arg1.strides[1]))) && (2634250 == cast(int32, (int64*)arg1.strides[0]))), "arg1.strides: expected to be compact array")
+        0
+      }
+      assert((0u64 == @tir.tvm_struct_get(arg1, 0, 8, dtype=uint64)), "Argument arg1.byte_offset has an unsatisfied constraint: ((uint64)0 == tir.tvm_struct_get(arg1, 0, 8))")
+      assert((1 == @tir.tvm_struct_get(arg1, 0, 10, dtype=int32)), "Argument arg1.device_type has an unsatisfied constraint: (1 == tir.tvm_struct_get(arg1, 0, 10))")
+      assert((dev_id == @tir.tvm_struct_get(arg1, 0, 9, dtype=int32)), "Argument arg1.device_id has an unsatisfied constraint: (dev_id == tir.tvm_struct_get(arg1, 0, 9))")
+      attr [0] "compute_scope" = "fused_nn_softmax_compute_";
+      for (i0.i1.fused.i2.fused: int32, 0, 5140) "parallel" {
+        attr [T_softmax_maxelem: Pointer(float32)] "storage_scope" = "global";
+        attr [T_softmax_maxelem] "storage_alignment" = 128 {
+          let T_softmax_maxelem = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+           {
+            if @tir.isnullptr(T_softmax_maxelem, dtype=bool) {
+              @tir.tvm_throw_last_error(, dtype=int32)
+            }
+            attr [T_softmax_exp: Pointer(float32)] "storage_scope" = "global";
+            attr [T_softmax_exp] "storage_alignment" = 128 {
+              let T_softmax_exp = @tir.TVMBackendAllocWorkspace(1, dev_id, 4100u64, 2, 32, dtype=handle)
+               {
+                if @tir.isnullptr(T_softmax_exp, dtype=bool) {
+                  @tir.tvm_throw_last_error(, dtype=int32)
+                }
+                attr [T_softmax_expsum: Pointer(float32)] "storage_scope" = "global";
+                attr [T_softmax_expsum] "storage_alignment" = 128 {
+                  let T_softmax_expsum = @tir.TVMBackendAllocWorkspace(1, dev_id, 4u64, 2, 32, dtype=handle)
+                   {
+                    if @tir.isnullptr(T_softmax_expsum, dtype=bool) {
+                      @tir.tvm_throw_last_error(, dtype=int32)
+                    }
+                     {
+                      T_softmax_maxelem[0] = -3.40282e+38f32
+                      for (k: int32, 0, 1025) {
+                        T_softmax_maxelem[0] = max((float32*)T_softmax_maxelem[0], (float32*)placeholder[((i0.i1.fused.i2.fused*1025) + k)])
+                      }
+                      for (i3: int32, 0, 1025) {
+                        T_softmax_exp[i3] = @tir.call_llvm_pure_intrin(54u32, 1u32, ((float32*)placeholder[((i0.i1.fused.i2.fused*1025) + i3)] - (float32*)T_softmax_maxelem[0]), dtype=float32)
+                      }
+                      T_softmax_expsum[0] = 0f32
+                      for (k_1: int32, 0, 1025) {
+                        T_softmax_expsum[0] = ((float32*)T_softmax_expsum[0] + (float32*)T_softmax_exp[k_1])
+                      }
+                      for (i3_1: int32, 0, 1025) {
+                        T_softmax_norm[((i0.i1.fused.i2.fused*1025) + i3_1)] = ((float32*)T_softmax_exp[i3_1] / (float32*)T_softmax_expsum[0])
+                      }
+                    }
+                  }
+                  if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_expsum, dtype=int32) != 0) {
+                    @tir.tvm_throw_last_error(, dtype=int32)
+                  }
+                }
+              }
+              if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_exp, dtype=int32) != 0) {
+                @tir.tvm_throw_last_error(, dtype=int32)
+              }
+            }
+          }
+          if (@tir.TVMBackendFreeWorkspace(1, dev_id, T_softmax_maxelem, dtype=int32) != 0) {
+            @tir.tvm_throw_last_error(, dtype=int32)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass Filter
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass BindTarget
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerWarpMemory
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.Simplify
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerCustomDatatypes
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerIntrin
+
+[11:57:03] /workspace/home/codes/tvm/src/ir/transform.cc:541: After pass tir.LowerDeviceStorageAccessInfo
+
+[11:57:03] /workspace/home/codes/tvm/src/relay/backend/vm/compiler.cc:1205: CODEGEN END
+
+Raw module: 
+def @main(%x: Tensor[(2, 10, 257, 1025), float32]) {
+  nn.softmax(%x)
+}
+
+Running on (llvm, cpu(0))
+Finish in 21.57092 ms

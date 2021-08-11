@@ -1,0 +1,31 @@
+digraph "IterVar Relationship Graph" {
+	graph [rankdir=TB]
+	subgraph cluster_legend {
+		label=Legend
+		legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#FFFFFF"></TD><TD BGCOLOR="white">kDataPar</TD></TR><TR><TD BGCOLOR="#2980B9"></TD><TD BGCOLOR="white">kThreadIndex</TD></TR><TR><TD BGCOLOR="#FAD7A0"></TD><TD BGCOLOR="white">kCommReduce</TD></TR><TR><TD BGCOLOR="#D35400"></TD><TD BGCOLOR="white">kOrdered</TD></TR><TR><TD BGCOLOR="#ABB2B9"></TD><TD BGCOLOR="white">kOpaque</TD></TR><TR><TD BGCOLOR="#D2B4DE"></TD><TD BGCOLOR="white">kUnrolled</TD></TR><TR><TD BGCOLOR="#AED6F1"></TD><TD BGCOLOR="white">kVectorized</TD></TR><TR><TD BGCOLOR="#F5B7B1"></TD><TD BGCOLOR="white">kParallelized</TD></TR><TR><TD BGCOLOR="#A9DFBF"></TD><TD BGCOLOR="white">kTensorized</TD></TR></TABLE>> margin=0 shape=none]
+	}
+	subgraph cluster_Stage_0 {
+		label=a
+		a_placeholder [style=invis]
+	}
+	subgraph cluster_Stage_1 {
+		label=b
+		b_placeholder [style=invis]
+	}
+	subgraph cluster_Stage_2 {
+		label=c
+		IterVar_2_0 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD PORT="IterVar_2_0" BGCOLOR="#FFFFFF">-1</TD><TD BGCOLOR="white" PORT="itervar">i: int32(kDataPar)<br/>range(min=0, ext=n)</TD></TR></TABLE>> margin=0 shape=none]
+		IterVar_2_1 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD PORT="IterVar_2_1" BGCOLOR="#FFFFFF">0</TD><TD BGCOLOR="white" PORT="itervar">i.outer: int32(kDataPar)<br/>range(min=0, ext=floordiv((n + 31), 32))</TD></TR></TABLE>> margin=0 shape=none]
+		IterVar_2_2 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD PORT="IterVar_2_2" BGCOLOR="#FFFFFF">-1</TD><TD BGCOLOR="white" PORT="itervar">i.inner: int32(kDataPar)<br/>range(min=0, ext=32)</TD></TR></TABLE>> margin=0 shape=none]
+		IterVar_2_3 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD PORT="IterVar_2_3" BGCOLOR="#FFFFFF">1</TD><TD BGCOLOR="white" PORT="itervar">i.inner.outer: int32(kDataPar)<br/>range(min=0, ext=1)</TD></TR></TABLE>> margin=0 shape=none]
+		IterVar_2_4 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD PORT="IterVar_2_4" BGCOLOR="#FFFFFF">2</TD><TD BGCOLOR="white" PORT="itervar">i.inner.inner: int32(kDataPar)<br/>range(min=0, ext=32)</TD></TR></TABLE>> margin=0 shape=none]
+		Split_Relation_2_0 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="lightgrey" PORT="Input">Input</TD><TD BGCOLOR="white"></TD></TR><TR><TD BGCOLOR="white" COLSPAN="2" PORT="relation">Split</TD></TR><TR><TD BGCOLOR="lightgrey" PORT="Outer">Outer</TD><TD BGCOLOR="lightgrey" PORT="Inner">Inner</TD></TR></TABLE>> margin=0 shape=none]
+		IterVar_2_0:itervar -> Split_Relation_2_0:Input
+		Split_Relation_2_0:Outer -> IterVar_2_1:itervar
+		Split_Relation_2_0:Inner -> IterVar_2_2:itervar
+		Split_Relation_2_1 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="lightgrey" PORT="Input">Input</TD><TD BGCOLOR="white"></TD></TR><TR><TD BGCOLOR="white" COLSPAN="2" PORT="relation">Split</TD></TR><TR><TD BGCOLOR="lightgrey" PORT="Outer">Outer</TD><TD BGCOLOR="lightgrey" PORT="Inner">Inner</TD></TR></TABLE>> margin=0 shape=none]
+		IterVar_2_2:itervar -> Split_Relation_2_1:Input
+		Split_Relation_2_1:Outer -> IterVar_2_3:itervar
+		Split_Relation_2_1:Inner -> IterVar_2_4:itervar
+	}
+}
